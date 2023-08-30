@@ -21,19 +21,15 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
     @Bean
-
     SecurityFilterChain chain(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeHttpRequests((authrize)->authrize
                         .anyRequest().authenticated()
                 ).httpBasic(Customizer.withDefaults());
-
-
         return http.build();
-
-}
-    @Bean
-    public UserDetailsService userDetailsService(){
+        }
+        @Bean
+        public UserDetailsService userDetailsService(){
         UserDetails user = User.builder()
                 .username("mahadi")
                 .password(passwordEncoder().encode("mahadi"))
