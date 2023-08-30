@@ -21,8 +21,8 @@ public class StudentController{
     public List<Student> student(){
         List<Student> students =new ArrayList<>();
         Student student=new Student(100 ,"Rabiul", "abc@gmail.com", "123");
-        Student student1=new Student(101 ,"Rabiul", "abc@gmail.com", "123");
-        Student student3=new Student(102 ,"Rabiul", "abc@gmail.com", "123");
+        Student student1=new Student(101 ,"Sakib", "abc@gmail.com", "123");
+        Student student3=new Student(102 ,"Jamal", "abc@gmail.com", "123");
         students.add(student);
         students.add(student1);
         students.add(student3);

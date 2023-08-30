@@ -21,6 +21,7 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
     @Bean
+
     SecurityFilterChain chain(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeHttpRequests((authrize)->authrize
