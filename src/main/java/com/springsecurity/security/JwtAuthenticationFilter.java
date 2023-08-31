@@ -22,10 +22,11 @@ import java.io.IOException;
 
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
+
+
     private Logger logger = LoggerFactory.getLogger(OncePerRequestFilter.class);
     @Autowired
     private JwtHelper jwtHelper;
-
 
     @Autowired
     private UserDetailsService userDetailsService;
@@ -64,7 +65,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 e.printStackTrace();
 
             }
-
 
         } else {
             logger.info("Invalid Header Value !! ");

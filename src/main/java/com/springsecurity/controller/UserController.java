@@ -1,4 +1,4 @@
-package com.springsecurity.controlle;
+package com.springsecurity.controller;
 
 import com.springsecurity.model.User;
 import org.springframework.security.access.prepost.PreAuthorize;
