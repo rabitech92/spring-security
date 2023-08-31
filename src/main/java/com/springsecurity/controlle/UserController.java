@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,10 +26,15 @@ public class UserController {
         return usersList;
     }
     @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("user")
+    @PostMapping("users")
     public User save(@RequestBody User user){
         users.add(user);
         return user;
+    }
+    @GetMapping("/loguser")
+    public String logUser(Principal principal){
+        return principal.getName();
+
     }
 
 }
